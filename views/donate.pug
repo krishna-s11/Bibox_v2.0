@@ -1,0 +1,36 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  script(src='https://kit.fontawesome.com/4ec9fc748c.js', crossorigin='anonymous')
+  link(rel='stylesheet', href='css/donate.css')
+  title ZeroHunger | Donate
+.container
+  .card
+    .card-img
+      p.heading
+        | Little by 
+        span(style='color:red') little
+        | , a 
+        span(style='color:red') little
+        |  becomes
+        br
+        span(style='color: red; font-size: 3.3rem; font-weight: 500;')  A LOT !
+    .card-content
+      a(href='/')
+        .logo-box
+          img.logo(src='../../img/hunger-logo.png', alt='Logo')
+      .form
+        h1.form__heading Start Donating Today!
+        .form-group
+          input#name.form__input(type='text', name='name', placeholder='Full Name')
+          label.form__label(for='name') Full Name
+        .form-group
+          input#mobile.form__input(type='tel', name='tel', pattern='[0-9]{10}', placeholder='Mobile Number')
+          label.form__label(for='tel') Mobile Number
+        .form-group
+          textarea#address.form__input(name='message', rows='3', placeholder='Address', required='')
+        a(href="/donate_confirm").btn.btn-blue.btn__sign-in Donate Now!
+  //- script(src='js/donate.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')

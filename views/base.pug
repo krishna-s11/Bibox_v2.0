@@ -1,0 +1,122 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet')
+    link(rel='stylesheet' href='css/icon-font.css')
+    link(rel='stylesheet' href='css/style.css')
+    link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+    script(src='https://kit.fontawesome.com/4ec9fc748c.js' crossorigin='anonymous')
+    title ZeroHunger | #NOHUNGER
+  body
+    header.header
+      .logo-box
+        img.logo(src='img/hunger-logo.png' alt='Logo')
+        div
+          a.btn.btn-white.sign-up(href='signin')
+            b Login
+          a#signup.btn.btn-white.sign-up(href='signup')
+            b Sign Up
+      .textbox
+        h1.heading-primary
+          span.heading-primary-main
+            b We provide food to 
+              span(style='color: red;') the needy
+          span.heading-primary-sub Join our mission to remove
+            span(style='color: red;')  hunger
+            | and avoid
+            span(style='color: red;') wastage
+            | .
+        a.btn.btn-white(href='/donate') Donate 
+          span(style='color:red') Now!
+    main
+      section.section-about
+        .u-center-text.u-margin-bottom-big
+          h2.heading-secondary Be part of our mission 
+            span(style='color: transparent; background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.8), rgba(187, 5, 5, 0.845)); -webkit-background-clip: text;') #NOHUNGER
+        .row
+          .col-1-of-2
+            h3.heading-tertiary.u-margin-bottom-small.mission.mission-text
+              | "We are the group of people working hard to remove hunger from our country and we need your support. This is about distributing leftover
+              | food to avoid wastage and feed the starving poor. If you are unemployed or underqualified, join us to deliver the food to needy. Our 
+              | goal is to reach the stage where no poor dies due to starvation."
+            a#btn-text.btn-text.mission(href='#reachUs') Reach Us &rarr;
+          .col-1-of-2
+            .composition
+              img(src='https://th.bing.com/th/id/R998541f7ab300e71f3908a5dfd2446b5?rik=wiQk20k4Ywv3Tw&riu=http%3a%2f%2ffarm9.staticflickr.com%2f8197%2f8201444395_495ef5fda2_z.jpg&ehk=yPR35OkZbsS9BW63fWkUjckdLdWbJErxOmxHxFNXbNs%3d&risl=&pid=ImgRaw' alt='Photo1' class='composition__photo composition__photo--p1')
+              img(src='https://i1.wp.com/faithfulcitizen.net/wp-content/uploads/2015/02/Children-Eating.jpg' alt='Photo2' class='composition__photo composition__photo--p2')
+              img(src='https://s-media-cache-ak0.pinimg.com/736x/ee/84/40/ee8440bfe6acc7d0cf2920a7c4995ac4.jpg' alt='Photo3' class='composition__photo composition__photo--p3')
+      section.book
+        div(class='book__form')
+          h1.map-text
+            span(style='color: red;') 30 minutes
+            | and someone starving will be happy because of
+            span(style='color: red;') you
+          a.btn.btn-white.map-register(href='./pages/donate/index.html') Donate 
+            span(style='color:red') Now!
+      section.intro-video
+        .u-center-text.u-margin-bottom-big
+          h2.heading-secondary Know more about 
+            span(style='color: transparent; background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.8), rgba(187, 5, 5, 0.845)); -webkit-background-clip: text;') Hunger.
+        .row
+          .col-1-of-2
+            h3.heading-tertiary.u-margin-bottom-small.mission.mission-text
+              | "According to the report, 14 per cent of India's population is undernourished. It also says that
+              | the country recorded a child stunting rate of 37.4 percent.
+            h3.heading-tertiary.u-margin-bottom-small.mission.mission-text
+              | In the 2020 Global Hunger Index, India ranks 94th out of the 107 countries.""
+            a#btn-text.btn-text.mission(href='https://www.indiafoodbanking.org/hunger' target='_blank') Learn More &rarr;
+          .col-1-of-2
+            .composition
+              iframe(width='560', height='315', src='https://www.youtube.com/embed/uTan2aCXAUQ', title='YouTube video player', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+              
+    footer#reachUs.footer
+      div(class='footer__logo-box')
+        img(src='img/hunger-white.png' alt='Full Logo' class='footer__logo')
+      .footer-content
+        .contact
+          div
+            h1.heading-primary(style='padding-bottom: 0;')
+              span.heading-primary-sub(style='font-size: 30px; margin-bottom:0; border-bottom: 1px solid #777; padding-bottom: 1rem;') contact us
+            a(href='tel:8800312995' type='mobile' class='footer__link' style='font-size: 18px; margin-bottom:15px;')
+              i.fas.fa-phone-alt.fa-2x(style='transform: translateY(5px); margin-right: 15px;')
+              | 9123455666
+            br
+            a(href='mailto:no.hunger@gmail.com' target='_blank' type='mobile' class='footer__link' style='font-size: 18px; margin-bottom: 50px;')
+              i.far.fa-envelope.fa-2x(style='transform: translateY(5px); margin-right: 15px;')
+              | no.hunger@gmail.com
+          div(class='footer__navigation')
+            ul(class='footer__list')
+              li(class='footer__item')
+                a(href='#' class='footer__link') Follow us @
+              li(class='footer__item')
+                a(href='https://www.instagram.com/gautamgrover4418/' target="_blank" class='footer__link')
+                  i.fab.fa-instagram.fa-2x(style='transform: translateY(5px);')
+              li(class='footer__item')
+                a(href='https://www.facebook.com/Shivansh.0508/' target="_blank" class='footer__link')
+                  i.fab.fa-facebook.fa-2x(style='transform: translateY(5px);')
+              li(class='footer__item')
+                a(href='https://twitter.com/SinghManeka' target="_blank" class='footer__link')
+                  i.fab.fa-twitter.fa-2x(style='transform: translateY(5px);')
+              li(class='footer__item')
+                a(href='#' class='footer__link')
+              li(class='footer__item')
+                a(href='#' class='footer__link')
+              li(class='footer__item')
+                a(href='#' class='footer__link')
+        .form
+          h1.heading-primary-sub.say-hello(style='margin-bottom: 5rem; font-size: 30px; text-transform: uppercase;') Say hello.
+          div(class='form__group')
+            input#name(type='text' class='form__input' placeholder='Full Name' required)
+            label(for='name' class='form__label') Full name
+          div(class='form__group')
+            input#email(type='tel' pattern='[0-9]{10}' class='form__input' placeholder='Mobile Number' required)
+            label(for='phone' class='form__label') Mobile number
+          div(class='form__group')
+            input#email(type='email' class='form__input' placeholder='Email' required)
+            label(for='email' class='form__label') Email
+          div(class='form__group')
+            textarea#email(name='message' rows='6' class='form__input' placeholder='Comment' required)
+          div(class='form__group')
+            button.btn.btn-white.get-call Get a call &rarr;

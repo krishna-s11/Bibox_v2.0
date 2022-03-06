@@ -1,0 +1,102 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='css/dashboard.css')
+  title Dashboard
+.container
+  .first
+    a(href="/")
+      .logo-box
+        img.logo(src='../../img/hunger-logo.png', alt='Logo')
+      .profile_photo
+    .personal.fadeInUp
+      div
+        p #{user.name}
+        p #{user.email}
+        p 
+      p.personal_para
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        | Possimus, eveniet? Adipisci repellat cumque rerum odio amet ex sit, animi asperiores? Lorem, ipsum dolor sit
+        | amet consectetur adipisicing elit. Debitis rem voluptate
+        | doloribus sed odit, eos modi vitae. Magni, minima veniam?
+  .second
+    h1#heading DASHBOARD
+    .secondpara.fadeInRight
+      p
+        | No. of 
+        span(style='color: #fed049;') Deliveries
+        |  so far  : 
+        span.fadeInRight &nbsp 695
+      p
+        | Food 
+        span(style='color: #fed049;') Delivered
+        |  so far  : 
+        span.fadeInRight &nbsp 1589 Kgs
+      p
+        | Service 
+        span(style='color: #fed049;') Duration
+        |   : 
+        span.fadeInRight &nbsp 24 months
+  .third
+    a#btn-text.btn-decline.mission.sign-out(href='#reachUs') Sign out &rarr;
+    p#third_heading Donor&apos;s Requests
+    .card
+      p
+        | Name: 
+        span Krishna Saxena
+      p
+        | Mobile: 
+        span 1234567890
+      p
+        | Address: 
+        span B-25, Citypark, Shahjahanpur-242001
+      div(style='text-align: center;')
+        a#btn-text.btn-text.acpt.mission(href='#reachUs') Accept &rarr;
+        a#btn-text.btn-decline.mission(href='#reachUs') Decline &rarr;
+      #myModal1.modal
+        .modal-content.fadeInUp
+          span.close &times;
+          .modal-text
+            p
+              | Name: 
+              span Krishna Saxena
+            p
+              | Mobile: 
+              span 1234567890
+            p
+              | Address: 
+              span B-25, Citypark, Shahjahanpur-242001
+          .map
+    .card
+      p
+        | Name: 
+        span Shivansh Srivastava
+      p
+        | Mobile: 
+        span 1234567890
+      p
+        | Address: 
+        span A-7,Block-D,Vasant Kunj,Delhi
+      div(style='text-align: center;')
+        a#btn-text.btn-text.acpt.mission(href='#reachUs') Accept &rarr;
+        a#btn-text.btn-decline.mission(href='#reachUs') Decline &rarr;
+      #myModal2.modal
+        .modal-content.fadeInUp
+          span.close &times;
+          .modal-text
+            p
+              | Name: 
+              span Shivansh Srivastava
+            p
+              | Mobile: 
+              span 1234567890
+            p
+              | Address: 
+              span A-7,Block-D,Vasant Kunj,Delhi
+          .map
+
+  script(src='js/dashboard.js')
+  script(src='js/logout.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')

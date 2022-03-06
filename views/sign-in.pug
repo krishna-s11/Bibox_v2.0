@@ -1,0 +1,68 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  script(src='https://kit.fontawesome.com/4ec9fc748c.js', crossorigin='anonymous')
+  script(src="https://apis.google.com/js/platform.js" async defer)
+  meta(name="google-signin-client_id" content="73292566106-u4fae2dm4ns2cmhj4h351dpj9568luma.apps.googleusercontent.com")
+
+  link(rel='stylesheet', href='css/signin.css')
+  title ZeroHunger | Sign-In
+.container
+  .card
+    .card-img
+      p.heading
+        | Start Helping 
+        span(style='color: red;') Today
+        | !
+      p.heading-sub  Sharing is caring.
+      a.btn.btn-blue(href='/signup') Register
+    .card-content
+      a(href='/')
+        .logo-box
+          img.logo(src='../../img/hunger-logo.png', alt='Logo')
+      .form
+        h1.form__heading Welcome Back!
+        .form-group
+          input#email.form__input(type='email', name='email', placeholder='Email address')
+          label.form__label(for='email') Email address
+        .form-group
+          input#password.form__input(type='password', name='password', placeholder='Password')
+          label.form__label(for='password') Password
+        .lower_content
+          div
+            input#vehicle1.check_sign-in(type='checkbox', name='vehicle1', value='Bike')
+            label.check__label(for='vehicle1') Stay Signed In
+          a.forgotpass(href='#')
+            i.fas.fa-lock
+            | &nbsp Forgot Password?
+        a.btn.btn-blue.btn__sign-in Sign In
+        .g-signin2(data-onsuccess="onSignIn" style="transform:scale(1.3); box-shadow:box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); border-radius:0.2rem;").sign_google
+  script.
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+    }
+
+  script. 
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      var id_token = googleUser.getAuthResponse().id_token;
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '/api/user/login-with-google');
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.onload = function() {
+        signOut();
+        console.log('Signed in as: ' + xhr.responseText);
+        if(xhr.responseText == 'success'){
+          location.assign('/dashboard');
+        }
+      };
+      xhr.send(JSON.stringify({token: id_token}));
+    };
+
+  script(src='js/login.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')

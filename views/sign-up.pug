@@ -1,0 +1,38 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  script(src='https://kit.fontawesome.com/4ec9fc748c.js', crossorigin='anonymous')
+  link(rel='stylesheet', href='css/signup.css')
+  title ZeroHunger | Sign-Up
+.container
+  .card
+    .card-img
+      p.heading
+        | Already Removing 
+        span(style='color: red;') Hunger
+        | ?
+      a.btn.btn-blue(href='signin') Sign In
+    .card-content
+      a(href='/')
+        .logo-box
+          img.logo(src='../../img/hunger-logo.png', alt='Logo')
+      .form
+        div(style='width:100%; text-align:center;')
+          h1.form__heading Start Delivering Happiness Today!
+        .form-group
+          input#name.form__input(type='text', name='name', placeholder='Full Name')
+          label.form__label(for='name') Full Name
+        .form-group
+          input#mobile.form__input(type='tel', name='tel', pattern='[0-9]{10}', placeholder='Mobile Number')
+          label.form__label(for='tel') Mobile Number
+        .form-group
+          input#email.form__input(type='email', name='email', placeholder='Email address')
+          label.form__label(for='email') Email address
+        .form-group
+          input#password.form__input(type='password', name='password', placeholder='Password')
+          label.form__label(for='password') Password
+        a.btn.btn-blue.btn__sign-in Sign Up
+  script(src='js/signup.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')

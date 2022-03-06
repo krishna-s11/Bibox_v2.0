@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+.a{
+    text-decoration: none
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to right bottom,rgba(9, 120, 120, 0.845),rgba(9, 120, 120, 0.845)),url(../../img/signup-back.jpg);
+    background-color: rgba(9, 120, 120, 0.845);
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 70vw;
+    height: 80vh;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 8rem 9rem rgba(0, 0, 0, 0.2);  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;             
+}
+
+.card__content{
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../../img/signup-left.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.deliver{
+    border-right: 2px solid white;
+}
+.card__content:hover{
+    transform: scale(1.04);
+}
+.card__content:active{
+    outline: none;
+    transform: scale(1.03);
+}
+.donate{
+    border-left: 2px solid white;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../../img/donate-food.jpg);
+}
+.heading{
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+}
+.heading-sub{
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;  
+    margin-bottom: 2em;
+}
+a{
+    text-decoration: none;
+}
